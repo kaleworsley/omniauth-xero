@@ -7,19 +7,19 @@ describe "OmniAuth::Strategies::Xero" do
 
   context 'client options' do
     it 'has correct site' do
-      subject.options.client_options.site.should eq('https://api.xero.com')
+      expect(subject.options.client_options.site).to eq('https://api.xero.com')
     end
 
     it 'has correct request token path' do
-      subject.options.client_options.request_token_path.should eq('/oauth/RequestToken')
+      expect(subject.options.client_options.request_token_path).to eq('/oauth/RequestToken')
     end
 
     it 'has correct access token path' do
-      subject.options.client_options.access_token_path.should eq('/oauth/AccessToken')
+      expect(subject.options.client_options.access_token_path).to eq('/oauth/AccessToken')
     end
 
     it 'has correct authorize path' do
-      subject.options.client_options.authorize_path.should eq('/oauth/Authorize')
+      expect(subject.options.client_options.authorize_path).to eq('/oauth/Authorize')
     end
   end
 end
