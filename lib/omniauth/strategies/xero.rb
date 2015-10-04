@@ -27,9 +27,14 @@ module OmniAuth
         { "raw_info" => raw_info }
       end
 
+      private
+
       def raw_info
-        @raw_info ||= MultiXml.parse(access_token.get("/api.xro/2.0/Users").body)["Response"]["Users"]["User"]
-        @raw_info.is_a?(Array) ? @raw_info.first : @raw_info
+        @raw_info ||= users.find { |user| user["IsSubscriber"] }
+      end
+
+      def users
+        @users ||= JSON.parse(access_token.get("/api.xro/2.0/Users", {'Accept'=>'application/json'}).body)["Users"]
       end
     end
   end
