@@ -1,4 +1,5 @@
-# Omniauth Xero
+# Omniauth Xero [![Build Status](https://travis-ci.org/kaleworsley/omniauth-xero.png?branch=master)](https://travis-ci.org/kaleworsley/omniauth-xero) [![Code Climate](https://codeclimate.com/github/kaleworsley/omniauth-xero.png)](https://codeclimate.com/github/kaleworsley/omniauth-xero)
+
 
 [Omniauth Xero](https://github.com/kaleworsley/omniauth-xero) is an [OmniAuth](https://github.com/intridea/omniauth) authentication strategy for [Xero](http://www.xero.com).
 
