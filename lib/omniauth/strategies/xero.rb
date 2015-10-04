@@ -1,5 +1,4 @@
 require "omniauth/strategies/oauth"
-require "multi_xml"
 
 module OmniAuth
   module Strategies
