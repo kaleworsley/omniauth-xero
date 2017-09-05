@@ -22,4 +22,10 @@ describe "OmniAuth::Strategies::Xero" do
       expect(subject.options.client_options.authorize_path).to eq('/oauth/Authorize')
     end
   end
+
+  context 'organization with no subscriber' do
+    it 'gets authorized' do
+      expect(subject.raw_info).to_not be_nil
+    end
+  end
 end
