@@ -13,6 +13,14 @@ module OmniAuth
         site:               "https://api.xero.com",
       }
 
+      credentials do
+        {
+          token:      access_token.token,
+          secret:     access_token.secret,
+          expires_at: (Time.now + Integer(access_token.params[:oauth_expires_in])).to_i
+        }
+      end
+
       info do
         {
           first_name: raw_info["FirstName"],
