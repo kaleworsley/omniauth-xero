@@ -38,7 +38,7 @@ module OmniAuth
       private
 
       def raw_info
-        @raw_info ||= users.find { |user| user["IsSubscriber"] }
+        @raw_info ||= users.find { |user| user["IsSubscriber"] } || users.first
       end
 
       def users
