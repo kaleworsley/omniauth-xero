@@ -34,7 +34,10 @@ module OmniAuth
       uid { raw_info["UserID"] }
 
       extra do
-        { raw_info: raw_info }
+        {
+          raw_info: raw_info,
+          xero_org_muid: access_token.params[:xero_org_muid]
+        }
       end
 
       private
