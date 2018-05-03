@@ -15,9 +15,11 @@ module OmniAuth
 
       credentials do
         {
-          token:      access_token.token,
-          secret:     access_token.secret,
-          expires_at: (Time.now + Integer(access_token.params[:oauth_expires_in])).to_i
+          token:                    access_token.token,
+          secret:                   access_token.secret,
+          expires_at:               (Time.now + Integer(access_token.params[:oauth_expires_in])).to_i,
+          session_handle:           access_token.params[:oauth_session_handle],
+          authorization_expires_at: access_token.params[:oauth_authorization_expires_in]
         }
       end
 
