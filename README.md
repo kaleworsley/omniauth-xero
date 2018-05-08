@@ -64,4 +64,4 @@ end
 
 ## Copyright
 
-Copyright (c) 2013 Kale Worsley. See [LICENSE.txt](LICENSE.txt) for details.
+Copyright (c) 2013-2018 Kale Worsley. See [LICENSE.txt](LICENSE.txt) for details.
